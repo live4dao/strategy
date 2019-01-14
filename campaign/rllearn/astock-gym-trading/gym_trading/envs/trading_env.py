@@ -307,7 +307,7 @@ class TradingEnv(gym.Env):
             action = strategy(observation, self)  # call strategy
             observation, reward, done, info = self.step(action)
             count += 1
-            print observation, reward, done, info, count
+            print (observation, reward, done, info, count)
 
         return self.sim.to_df() if return_df else None
 
